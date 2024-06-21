@@ -1,0 +1,16 @@
+.profile {
+	border-radius: 50%;
+	object-fit: cover;
+	   width:270px;
+    height:270px;
+}
+
+.profileDiv {
+	  text-align: center;
+    margin-top: 35px;
+
+}
+
+.profileText {
+	margin-top:20px;
+}

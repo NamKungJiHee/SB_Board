@@ -1,0 +1,17 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container">
+   <h5 class="my-3 border-bottom pb-2">아이디 찾기</h5>
+   <form th:action="@{/user/findid}" method="post">
+         <div class="mb-3">
+            <label for="userName" class="form-label">이메일</label>
+            <input type="text" name="email" id="email" class="form-control">
+         </div>
+         <button type="submit" class="btn btn-primary">확인하기</button>
+      </form>
+	    <div th:if="${username != null}">
+	       사용자님의 ID는 
+	       <span class="text-danger small ms-2" th:text="${username}"></span>
+	       입니다.
+	    </div>      
+	  </div>
+	  </html>

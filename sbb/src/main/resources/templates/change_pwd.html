@@ -1,0 +1,36 @@
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container">
+   <h5 class="my-3 border-bottom pb-2">비밀번호 변경</h5>
+   <h6><span style="color: coral;">이전에 사용한 적 없는 비밀번호</span><span style="color: black;">가 안전합니다.</span></h6>
+   <form th:action="@{/user/changepwd}" th:object="${userPwdForm}" method="post">
+	<div th:replace="~{form_errors :: formErrorsFragment}"></div>	
+	<div class="mb-3">
+		<div class="mb-3">
+			<label for="username" class="form-label">사용자 이름</label>
+			<input type="text" th:field="*{username}" class="form-control">
+		</div>
+   			<label for="password" class="form-label">현재 비밀번호</label>
+   			<input type="password" th:field="*{password}" class="form-control">
+   		</div>
+   		<div class="mb-3">
+   			<label for="newPassword1" class="form-label">새 비밀번호</label>
+   			<input type="password" th:field="*{newPassword1}" class="form-control">
+   		</div>
+   		<div class="mb-3">
+   			<label for="newPassword2" class="form-label">새 비밀번호 확인</label>
+   			<input type="password" th:field="*{newPassword2}" class="form-control">
+   		</div>
+   		<button type="submit" class="btn btn-primary">확인</button>
+		<button type="button" class="cancel btn btn-primary" th:data-uri="@{|/user/profile|}">취소</button>
+   	</form>
+	<script layout:fragment="pwdscript" type='text/javascript'>
+	const cancel_elements = document.getElementsByClassName("cancel");
+	Array.from(cancel_elements).forEach(function(element) {
+		element.addEventListener('click', function() {
+			if(confirm("정말로 취소하시겠습니까?")) {
+				location.href=this.dataset.uri;
+			};
+		});
+		});
+	</script>
+	  </html>

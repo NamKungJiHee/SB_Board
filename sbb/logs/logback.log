@@ -1,0 +1,20 @@
+[2024-06-21 11:51:36:659][restartedMain] INFO  com.mysite.sbb.SbbApplication - Starting SbbApplication using Java 17.0.10 with PID 12808 (C:\Users\Judy\Desktop\Practice\springboot\sbb\bin\main started by Judy in C:\Users\Judy\Desktop\Practice\springboot\sbb)
+[2024-06-21 11:51:36:663][restartedMain] DEBUG com.mysite.sbb.SbbApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+[2024-06-21 11:51:36:664][restartedMain] INFO  com.mysite.sbb.SbbApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-06-21 11:54:00:144062][restartedMain] INFO  com.mysite.sbb.SbbApplication - Started SbbApplication in 143.857 seconds (process running for 144.518)
+[2024-06-21 12:06:25:571][restartedMain] INFO  com.mysite.sbb.SbbApplication - Starting SbbApplication using Java 17.0.10 with PID 7004 (C:\Users\Judy\Desktop\Practice\springboot\sbb\bin\main started by Judy in C:\Users\Judy\Desktop\Practice\springboot\sbb)
+[2024-06-21 12:06:25:579][restartedMain] DEBUG com.mysite.sbb.SbbApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+[2024-06-21 12:06:25:580][restartedMain] INFO  com.mysite.sbb.SbbApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-06-21 12:08:37:132677][restartedMain] INFO  com.mysite.sbb.SbbApplication - Started SbbApplication in 132.509 seconds (process running for 133.107)
+[2024-06-21 12:24:04:550][restartedMain] INFO  com.mysite.sbb.SbbApplication - Starting SbbApplication using Java 17.0.10 with PID 15644 (C:\Users\Judy\Desktop\Practice\springboot\sbb\bin\main started by Judy in C:\Users\Judy\Desktop\Practice\springboot\sbb)
+[2024-06-21 12:24:04:550][restartedMain] DEBUG com.mysite.sbb.SbbApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+[2024-06-21 12:24:04:551][restartedMain] INFO  com.mysite.sbb.SbbApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-06-21 12:26:51:167621][restartedMain] INFO  com.mysite.sbb.SbbApplication - Started SbbApplication in 167.451 seconds (process running for 168.061)
+[2024-06-21 12:27:42:680][restartedMain] INFO  com.mysite.sbb.SbbApplication - Starting SbbApplication using Java 17.0.10 with PID 5272 (C:\Users\Judy\Desktop\Practice\springboot\sbb\bin\main started by Judy in C:\Users\Judy\Desktop\Practice\springboot\sbb)
+[2024-06-21 12:27:42:681][restartedMain] DEBUG com.mysite.sbb.SbbApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+[2024-06-21 12:27:42:682][restartedMain] INFO  com.mysite.sbb.SbbApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-06-21 12:30:28:166439][restartedMain] INFO  com.mysite.sbb.SbbApplication - Started SbbApplication in 166.258 seconds (process running for 166.913)
+[2024-06-21 15:08:27:564][restartedMain] INFO  com.mysite.sbb.SbbApplication - Starting SbbApplication using Java 17.0.10 with PID 14208 (C:\Users\Judy\Desktop\Practice\springboot\sbb\bin\main started by Judy in C:\Users\Judy\Desktop\Practice\springboot\sbb)
+[2024-06-21 15:08:27:565][restartedMain] DEBUG com.mysite.sbb.SbbApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+[2024-06-21 15:08:27:565][restartedMain] INFO  com.mysite.sbb.SbbApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-06-21 15:10:41:135115][restartedMain] INFO  com.mysite.sbb.SbbApplication - Started SbbApplication in 134.936 seconds (process running for 135.578)

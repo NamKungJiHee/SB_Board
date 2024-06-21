@@ -1,0 +1,47 @@
+<html layout:decorate="~{layout}">
+<!-- css -->
+	<link rel="stylesheet" type="text/css" href="/findpwd-style.css">
+	<!-- -->
+<div layout:fragment="content" class="container">
+   <h5 class="my-3 border-bottom pb-2">비밀번호 찾기</h5>
+   <input type="hidden" name="isSuccess"  id="isSuccess"  th:value="${isSuccess}">
+   <form th:action="@{/user/findpwd}" method="post">
+         <div class="mb-3">
+            <label for="userName" class="form-label">사용자 ID</label>
+            <input type="text" name="userName" id="userName" class="form-control">
+			<label for="userName" class="form-label">이메일</label>
+			 <input type="text" name="email" id="email" class="form-control">
+         </div>
+         <button id="submit" type="submit" class="btn btn-primary">확인하기</button>
+      </form>  
+	  <div id="modalContainer" class="modal" tabindex="-1">
+	    <div class="modal-dialog">
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <h5 class="modal-title" style="text-align: center;">이메일 전송완료</h5>
+	          <button style="text-align: center;" id="closeModal" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	        </div>
+	        <div class="modal-body">
+	          <p>회원님의 임시 비밀번호를 이메일로 보냈습니다.</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button style="text-align: center;" id="confirmButton" type="button" class="btn btn-primary">확인</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+  </div>
+  <script layout:fragment="changepwdscript" type='text/javascript'>
+	const modal=document.getElementById("modalContainer");
+	const confirmButton=document.getElementById("confirmButton");
+	const closeModalButton=document.getElementById("closeModal");
+	const isSuccess=document.getElementById("isSuccess").value;
+	   if(isSuccess == "true"){modal.style.display = 'block';}
+	confirmButton.addEventListener('click', () => {
+		modal.style.display = 'none';
+	});
+	closeModalButton.addEventListener('click', () => {
+		modal.style.display = 'none';
+	});
+	</script>
+  </html>

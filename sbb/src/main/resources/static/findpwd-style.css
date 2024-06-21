@@ -1,0 +1,22 @@
+.modal {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    text-align: center;
+}
+
+.modal-title {
+    text-align: center;
+    margin: 0;
+}
+
+.modal-body {
+    background: linear-gradient(to right, white 0%, white 10%, lightgray 10%, lightgray 90%, white 90%, white 100%);
+	border-radius:10%;
+}

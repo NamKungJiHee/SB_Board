@@ -1,0 +1,76 @@
+<html layout:decorate="~{layout}">
+    <!-- css -->
+	<link rel="stylesheet" type="text/css" href="/profile-style.css">
+    <!-- -->
+    <div layout:fragment="content" class="container">
+       <h5 class="my-3 border-bottom pb-2">내 정보</h5>
+       <form id="profileForm" enctype="multipart/form-data">
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <div class="profileDiv">
+			<img th:src="${profileImage}"  alt="Profile Image" class="profile" id="profile">
+                <h5 class="profileText" th:text="${#authentication.name}"></h5>
+                <div>
+                <label for="fileInput" class="profileText btn btn-primary">사진 찾기</label>
+                <span>
+                    <input type="file" id="fileInput" name="profileImage" style="display: none;">
+                </span>
+                <span id="check" class="profileText btn btn-primary">✓</span>
+            </div>
+            </form> 
+            <form>
+                <div>
+                    <a th:href="@{/user/changepwd}" class="profileText btn btn-primary">비밀번호 변경</a>
+                </div> 
+            </div>
+        </form>
+        </div>
+        
+        <script layout:fragment="profilescript" type='text/javascript'>
+			// 초기 이미지 설정
+			/**
+			document.addEventListener("DOMContentLoaded", function() {
+			       var profileImage = document.querySelector(".profile");
+			       profileImage.src = '/profile.jpg';
+			   });
+  
+			   **/
+            document.getElementById("fileInput").addEventListener("change", function() {
+                var file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();  // 선택한 파일(file)을 읽어와라.
+                    reader.onload = function(e) {
+                        document.getElementById('profile').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file); // -> 읽어오기 이벤트(load)
+                }
+            });
+			
+			document.getElementById("check").addEventListener("click", function() {
+			    var fileInput = document.getElementById("fileInput");
+			    var file = fileInput.files[0];
+			    if(!file) {
+			        alert("파일을 먼저 선택해주세요.");
+			        return;
+			    }
+				
+			    var formData = new FormData();
+			    formData.set("profileImage", file);
+			
+				// CSRF 토큰 추가
+				var csrfToken = document.querySelector('input[name="_csrf"]').value;
+				formData.set("_csrf", csrfToken);
+				
+			    var xhr = new XMLHttpRequest();
+			    xhr.open("POST", "/user/uploadProfileImage", true); // 비동기
+			    xhr.onreadystatechange = function() {
+			        if (xhr.readyState === 4 && xhr.status === 200) {
+						console.log("완료: ");
+						alert('프로필 사진이 변경되었습니다.');
+			        }
+			    };
+			    xhr.send(formData);
+			});
+		
+        </script>
+    </div>
+</html>
